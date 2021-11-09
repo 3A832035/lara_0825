@@ -18,10 +18,10 @@ Route::get('/', function (){
    return view('welcome');
 });
 
-Route::get('posts', [Controllers\IndexController::class, 'index']);
+Route::get('posts', [Controllers\IndexController::class, 'index'])->name('posts.index');
 
-Route::get('post', [Controllers\PostController::class, 'index']);
+Route::get('post', [Controllers\PostController::class, 'index'])->name('posts.post');
 
-Route::get('contact', [Controllers\ContactController::class, 'index']);
+Route::get('contact', [Controllers\ContactController::class, 'index'])->name('posts.contact');
 
-Route::get('about', [Controllers\AboutController::class, 'index']);
+Route::get('about', [Controllers\AboutController::class, 'index'])->name('posts.about');

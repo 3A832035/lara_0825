@@ -12,13 +12,13 @@
                     <a class="nav-link" href="{{route('posts.index')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('about.index')}}">About</a>
+                    <a class="nav-link" href="{{route('posts.about')}}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('post.index')}}">Sample Post</a>
+                    <a class="nav-link" href="{{route('posts.post')}}">Sample Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('contact.index')}}">Contact</a>
+                    <a class="nav-link" href="{{route('posts.contact')}}">Contact</a>
                 </li>
             </ul>
         </div>
