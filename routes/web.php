@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,10 @@ use App\Http\Controllers;
 */
 
 Route::get('/', function (){
-   return view('welcome');
+    $post=new Post();
+    $post->title ='test title';
+    $post->content='test content';
+    $post->save();
 });
 
 Route::get('posts', [Controllers\IndexController::class, 'index'])->name('posts.index');
@@ -25,3 +29,5 @@ Route::get('post', [Controllers\PostController::class, 'index'])->name('posts.po
 Route::get('contact', [Controllers\ContactController::class, 'index'])->name('posts.contact');
 
 Route::get('about', [Controllers\AboutController::class, 'index'])->name('posts.about');
+
+
